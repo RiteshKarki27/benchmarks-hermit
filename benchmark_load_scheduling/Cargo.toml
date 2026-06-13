@@ -1,0 +1,13 @@
+[package]
+name = "benchmark_scheduling"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fork = "0.7.0"
+libc = "0.2"
+nix = { version = "0.31", features = ["process"] }
+humantime = "2.1"
+
+[features]
+default=[]
