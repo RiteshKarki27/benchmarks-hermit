@@ -9,9 +9,9 @@ const BLOCKING_T: i32 = 2;
 const CORE: usize = 4;
 
 fn main() {
-    let nb_tasks = CORE * 2; // ?
+    let nb_tasks = CORE * 2; // or more ?
     let duration = scenario_short_task(nb_tasks);
-    println!("{}.{}.{}", duration.as_secs(), duration.subsec_millis(), duration.subsec_micros() % 1000);
+    println!("{}.{:03}.{:03}", duration.as_secs(), duration.subsec_millis(), duration.subsec_micros() % 1000);
 }
 
 
