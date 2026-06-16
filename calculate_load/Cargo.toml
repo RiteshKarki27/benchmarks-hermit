@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 nix = {version = "0.31.3", features = ["feature"]}
 procfs = "0.18.0"
+fixed = "1.31.0"
