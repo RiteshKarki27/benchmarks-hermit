@@ -10,6 +10,7 @@ use std::time::{Duration,SystemTime, UNIX_EPOCH, Instant};
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
+
 #[cfg(target_os = "hermit")]
 use hermit as _;
 
@@ -78,7 +79,7 @@ fn main() {
                 response_time: response,
             };
             
-            println!("{}", serde_json::to_string_pretty(&output).unwrap());
+            println!("{}", serde_json::to_string(&output).unwrap());
         }
         "mix" => {
             let (total_time, waiting, execution, response) = scenario_mix(
@@ -104,7 +105,7 @@ fn main() {
                 response_time: response,
             };
             
-            println!("{}", serde_json::to_string_pretty(&output).unwrap());
+            println!("{}", serde_json::to_string(&output).unwrap());
         }
         _ => {
             eprintln!("Unknown mode: {}. Use 'fix' or 'mix'", mode);
